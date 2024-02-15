@@ -483,3 +483,108 @@ textarea,
 .foot {
     color: white;
 }
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    /* Adjust navigation */
+    .navigation {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .navigation .left {
+        margin-bottom: 20px;
+    }
+
+    #pic {
+        margin-top: 20px;
+        width: 50%;
+    }
+
+    .navigation .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .navigation .right ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation .right ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    /* Adjust hero section */
+    .hero-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h3,
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .hero-left .icons {
+        justify-content: center;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    /* Adjust about section */
+    .about-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .webdevelopment p {
+        margin: 20px 0;
+    }
+
+    /* Adjust projects section */
+    .first-section,
+    .second-section {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .first-section .box-1,
+    .second-section .box-1 {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    .head-first {
+        flex-direction: column;
+        align-items: center; /* Added to center items vertically */
+    }
+
+    /* Adjust footer section */
+    .footer-father {
+        flex-direction: column;
+    }
+
+    .footer-father .footer-left,
+    .footer-father .footer-right {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer-father .footer-right input,
+    .footer-father .footer-right textarea {
+        width: 100%;
+    }
+
+    .footer-btn {
+        width: 100%;
+    }
+}
