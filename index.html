@@ -194,30 +194,5 @@
         My Personal Portfolio Website &copy; Copyright 2024 John Marlon Montera
     </footer>
 </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('.footer-section form');
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const inputs = form.querySelectorAll('input, textarea');
-            let isValid = true;
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.classList.add('error');
-                    input.setAttribute('placeholder', 'Please fill out this field');
-                } else {
-                    input.classList.remove('error');
-                }
-            });
-            if (isValid) {
-                // Here you can add code to submit the form or perform other actions
-                console.log('Form submitted successfully!');
-            }
-        });
-    });
-
-    </script>
 </body>
 </html>
