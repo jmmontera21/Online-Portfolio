@@ -1,0 +1,229 @@
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+    /* Adjust navigation */
+    header nav {
+        display: none;
+    } 
+
+    .navigation {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .navigation .right {
+        width: 100%;
+        position: relative;
+    }
+
+    .navigation .right ul {
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: -35px;
+        padding: 20px 20px;
+        background: darkcyan;
+    }
+
+    .navigation .right ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    #hamburger {
+        display: block;
+        top: 3.4rem;
+        right: 3rem;
+        background-color: transparent;
+    }
+
+    .navigation .left {
+        margin-left: -300px;
+    }
+
+    /* Adjust hero section */
+    .hero-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    #element {
+        font-size: 2rem;
+    }
+
+    /* Adjust about section */
+    .about-section {
+        height: auto;
+        padding: 50px 0;
+    }
+    
+
+    /* Adjust projects section */
+    .project-main {
+        height: auto;
+    }
+
+    .head-first .box-1 {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    /* Adjust footer section */
+    .footer-father {
+        flex-direction: column;
+    }
+
+    .footer-father .footer-left,
+    .footer-father .footer-right {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer-father .footer-right input,
+    .footer-father .footer-right textarea {
+        width: 100%;
+    }
+
+    .footer-btn {
+        width: 100%;
+        padding: 13px 0px;
+        letter-spacing: 1px;
+    }
+
+    .footer-btn:hover {
+        width: 100%;
+        background: transparent;
+        border: 2px solid #021047;
+        color: rgb(0, 0, 0);
+    }
+
+    .data-aos{
+        display: none;
+    }
+
+    .last-footer {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust navigation */
+    .navigation {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .navigation .left {
+        margin-bottom: 0;
+    }
+
+    #pic {
+        margin-left: 60px;
+        margin-top: 20px;
+        width: 50%;
+    }
+
+    .navigation .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .navigation .right ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation .right ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    /* Adjust hero section */
+    .hero-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h3,
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .hero-left .icons {
+        justify-content: center;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    /* Adjust about section */
+    .about-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .webdevelopment p {
+        margin: 20px 0;
+    }
+
+    /* Adjust projects section */
+    .project-main {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .head-first {
+        height: 240vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .head-first .box-1 {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    /* Adjust footer section */
+    .footer-father {
+        flex-direction: column;
+    }
+
+    .footer-father .footer-left,
+    .footer-father .footer-right {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .footer-father .footer-right input,
+    .footer-father .footer-right textarea {
+        width: 100%;
+    }
+
+    .footer-btn {
+        width: 100%;
+    }
+
+    .footer-icons {
+        justify-content: center;
+    }
+
+    #hamburger {
+        width: 30px;
+        position: absolute;
+        background-color: transparent;
+        cursor: pointer;
+        right: 2rem;
+    }
+}
+
