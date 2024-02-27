@@ -6,6 +6,8 @@
     <title>Online Portfolio</title>
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="decoration.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="media queries.css">
     <!-- External Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +17,7 @@
 <div id="hero">
     <nav class="navigation sticky">
         <div class="left">
-            <img src="logo.png" alt="image" id="pic">
+            <a href="#"><img src="logo.png" alt="image" id="pic"></a>
         </div>
         <div class="right">
             <ul>
@@ -23,8 +25,19 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <button class="btn">Download CV</button>
+                <div class="hero-sec-buttons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <a href="Marlon Resume.pdf" download="John Marlon Montera Resume" target="_blank"><button class="btn">Download CV</button></a>
+                </div>
             </ul>
+        </div>
+        <div id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </nav>
     
@@ -32,10 +45,12 @@
     <section class="hero-section">
         <div class="first-section">
             <div class="hero-left">
-                <h3>Hi! My name is <span id="color"> John Marlon Montera</span></h3>
-                <h1>and I am a passionate <span id="element">Web Developer</span></h1>
+                <h3>Hi! My name is</h3> 
+                <h3><span id="color">John Marlon Montera</span></h3>
+                <h1>and I am a passionate</h1>
+                <h5><span id="element"></span></h5>
                 <div class="icons">
-                    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                    <a href="mailto:jmmontera456@gmail.com" target="_blank">
                         <div class="icon-child"><i class="fa-solid fa-envelope"></i></div>
                     </a>
                     <a href="https://github.com/jmmontera21" target="_blank">
@@ -50,7 +65,9 @@
                     <span class="near-to-hero-sec-btn"></span>
                 </div>
             </div>
+            <div class="hero-right">
                 <img src="Pictures of Projects/heropic.png" alt="image">
+            </div>
         </div>
     </section>
 
@@ -58,9 +75,9 @@
     <!-- About Section -->
 <div id="about">
     <section class="about-section">
-        <h1 class="center">About</h1>
+        <h1 class="center" id="about-header">About</h1>
         <div class="head-about">
-            <div class="webdevelopment">
+            <div class="webdevelopment" data-aos="zoom-in-down">
                 <img src="Pictures of Projects/aboutpic.jpg" alt="image">
                 <p>I am Marlon, currently in my third year pursuing a Bachelor's degree in Information Technology. 
                     As a newcomer to the field of web development, I bring with me a blend of eagerness and determination. 
@@ -73,82 +90,65 @@
 </div>
 
     <!-- Projects Section -->
-    <!-- First Section -->
 <div id="projects">
-    <section class="first-section">
-        <h1 class="center">Projects</h1>
+    <section class="project-main">
+        <h1 class="center" id="projects-header">Projects</h1>
         <div class="head-first">
-            <div class="box-1">
-                <img src="Pictures of Projects/personalb.jpg" alt="image">
-                <h3>Personal Blog</h3>
-                <p>This website comprises my personal life experiences and compelling information intended to engage and resonate with visitors. It employs straightforward CSS alongside extensive utilization of HTML to achieve its design and functionality.</p>
-                <a href="#">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="#">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+            <div class="box-1" data-aos="zoom-in">
+                <img src="Pictures of Projects/reshumey.jpg" alt="image">
+                <h3>Online Resume</h3>
+                <p>This website showcases my qualifications as a student seeking to join your company, presented in the form of a resume. It is built using HTML and CSS, with additional imagery to enhance presentation and clarity.</p>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/My-Online-Resume/" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/My-Online-Resume" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>
             </div>
-            <div class="box-1">
+            <div class="box-1" data-aos="zoom-in">
                 <img src="Pictures of Projects/calcu.jpg" alt="image">
                 <h3>Online Calculator</h3>
                 <p>The functionality of this online calculator is supported by a straightforward CSS layout, meticulously crafted HTML, and JavaScript for its operations.</p>
-                <a href="https://jmmontera21.github.io/Working-Calculator/" target="_blank">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="https://github.com/jmmontera21/Working-Calculator" target="_blank">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/Working-Calculator/" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/Working-Calculator" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>    
             </div>
-            <div class="box-1">
+            <div class="box-1" data-aos="zoom-in">
                 <img src="Pictures of Projects/todos.jpg" alt="image">
                 <h3>Todo List</h3>
                 <p>This website serves as a task management tool, enabling users to jot down and subsequently remove completed tasks from a to-do list. Its development involved the utilization of HTML, CSS, and JavaScript.</p>
-                <a href="https://jmmontera21.github.io/Todo-List/" target="_blank">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="https://github.com/jmmontera21/Todo-List" target="_blank">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/Todo-List/" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/Todo-List" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <!-- Second Section -->
-    <section class="second-section">
         <div class="head-first">
-            <div class="box-1">
+            <div class="box-1" data-aos="zoom-in">
                 <img src="Pictures of Projects/3buttons.jpg" alt="image">
                 <h3>Clickable Three Buttons</h3>
                 <p>This website features three buttons, each triggering an alert message upon selection. Its functionality is achieved through the integration of HTML, CSS, and JavaScript components.</p>
-                <a href="https://jmmontera21.github.io/HandsOn1-addEventListener-WS101/" target="_blank">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="https://github.com/jmmontera21/HandsOn1-addEventListener-WS101" target="_blank">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/HandsOn1-addEventListener-WS101/" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/HandsOn1-addEventListener-WS101" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>
             </div>
-            <div class="box-1">
+            <div class="box-1" data-aos="zoom-in">
                 <img src="Pictures of Projects/colchange2.jpg" alt="image">
                 <h3>Color Changer</h3>
                 <p>This straightforward website comprises a box, a button, and a color indicator on the screen. Upon clicking the button, the color of the box alternates and returns to its original state upon subsequent clicks. Its implementation utilizes HTML, CSS, and JavaScript technologies.</p>
-                <a href="https://jmmontera21.github.io/HandsOn2-colorChanger-WS101/" target="_blank">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="https://github.com/jmmontera21/HandsOn2-colorChanger-WS101" target="_blank">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/HandsOn2-colorChanger-WS101/" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/HandsOn2-colorChanger-WS101" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>
             </div>
-            <div class="box-1">
+            <div class="box-1" data-aos="zoom-in">
                 <img src="Pictures of Projects/responsiveweb.jpg" alt="image">
                 <h3>Responsive Website</h3>
                 <p>This website showcases the attractions and activities available in my hometown, Marinduque. It is constructed using HTML, CSS, and JavaScript to provide an interactive and informative experience for visitors.</p>
-                <a href="https://jmmontera21.github.io/Responsive-Website/#" target="_blank">
-                    <button class="first-sec-btn">See Project</button>
-                </a>
-                <a href="https://github.com/jmmontera21/Responsive-Website" target="_blank">
-                    <button class="first-sec-btn">View Source Code</button>
-                </a>
+                <div class="project-btn">
+                    <a href="https://jmmontera21.github.io/Responsive-Website/#" target="_blank"><button class="first-sec-btn">See Project</button></a>
+                    <a href="https://github.com/jmmontera21/Responsive-Website" target="_blank"><button class="first-sec-btn">View Source Code</button></a>
+                </div>
             </div>
         </div>
     </section>
@@ -157,11 +157,11 @@
     <!-- Footer Section -->
 <div id="contact">
     <footer class="footer-section">
-        <h1 class="center">Contact</h1>
+        <h1 class="center" id="contact-header">Contact</h1>
         <div class="footer-father">
-            <div class="footer-left">
+            <div class="footer-left" data-aos="zoom-in">
                 <h1>Let's work together</h1>
-                <p>Feel free to reach out if you need assistance. Despite being new to web development, I possess valuable knowledge that can greatly benefit those seeking to enhance their understanding of website creation. Don't hesitate to get in touch and explore my basic online portfolio.</p>
+                <p>Feel free to reach out if you need assistance. Despite being new to web development, I possess valuable knowledge that can greatly benefit those seeking to enhance their understanding of website creation. Don't hesitate to get in touch and explore my simple online portfolio.</p>
                 <div class="footer-icons">
                     <a href="https://web.facebook.com/johnmarlon.montera.731" target="_blank">
                         <li><i class="fa-brands fa-facebook"></i></li>
@@ -180,12 +180,15 @@
                     </a>
                 </div>
             </div>
-            <div class="footer-right">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
-                <button class="btn footer-btn">Submit</button>
-            </div>
+            <form id="contact-form" class="footer-right" data-aos="zoom-in">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" cols="30" rows="10" required></textarea><br>
+                <button type="submit" id="sendButton" class="btn footer-btn">SEND</button>
+            </form>
         </div>
     </footer>
 </div>
@@ -193,6 +196,46 @@
     <footer class="last-footer">
         My Personal Portfolio Website &copy; Copyright 2024 John Marlon Montera
     </footer>
-</div>
+
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Programmer', 'Web Designer', 'Web Developer'],
+            typeSpeed: 100,
+        });
+    </script>
+    <!-- Initialize AOS for scroll animations -->
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 800,
+        });
+    </script>
+    <!-- Form Validation -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert("Your message has been sent successfully");
+        });
+    </script>
+    <!-- Responsive Menu Bar -->
+    <script>
+        const right = document.querySelector(".right");
+        const burger = document.querySelector("#hamburger");
+
+        burger.addEventListener("click", () => {
+            if (right.style.display != "none") {
+
+                right.style.display = "none";
+            }
+            else {
+
+                right.style.display = "block";
+            }
+        });
+    </script>
 </body>
 </html>
