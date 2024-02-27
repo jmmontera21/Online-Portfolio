@@ -1,8 +1,10 @@
 /* Root variables */
 :root {
-    --font-family: Arial, Helvetica, sans-serif;
-    --roboto: 'Roboto', sans-serif;
-    --balo: 'Baloo Bhaina 2', cursive;
+    font-family: sans-serif;
+    background-image: url(bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 * {
@@ -15,8 +17,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: darkcyan;
     height: 15vh;
-    background: darkcyan;
     position: relative;
 }
 
@@ -41,7 +43,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--roboto);
     position: relative;
     width: 50%;
 }
@@ -49,11 +50,12 @@
 .navigation .right ul {
     display: flex;
     align-items: center;
+    margin-right: 35px;
 }
 
 .navigation .right ul li {
     list-style: none;
-    margin-right: 4rem;
+    margin-right: 3.7rem;
 }
 
 .navigation .right ul li a {
@@ -86,35 +88,6 @@
     transform-origin: left;
 }
 
-/* Submenu */
-.hover_menu {
-    display: none;
-}
-
-.right ul li:hover .hover_menu {
-    display: block;
-    position: absolute;
-    background: #000073;
-    margin-top: 3px;
-    padding-top: 30px;
-    z-index: 11;
-}
-
-.right ul li:hover .hover_menu ul {
-    display: block;
-    margin: 14px;
-    text-align: center;
-}
-
-.right ul li:hover .hover_menu ul li {
-    margin-right: 0px;
-    padding: 20px 0px;
-}
-
-.right ul li:hover .hover_menu ul li a:hover {
-    color: #95a5e4;
-}
-
 /* Button styles */
 .btn {
     padding: 8px 16px;
@@ -125,6 +98,7 @@
     cursor: pointer;
     font-size: 18px;
     transition: all .6s ease;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -132,8 +106,8 @@
     color: rgb(255, 255, 255);
 }
 
-/* Burger menu */
-#burger {
+/* Hamburger menu */
+#hamburger {
     width: 30px;
     position: absolute;
     background-color: transparent;
@@ -141,8 +115,7 @@
     right: 6rem;
     display: none;
 }
-
-#burger .line {
+#hamburger .line{
     height: 4px;
     border-radius: 2px;
     margin: 5px 0px;
@@ -151,66 +124,25 @@
 
 /* Hero section styles */
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--balo);
     background: darkcyan;
-    height: 170vh;
+    height: 88.9vh;
 }
 
 .first-section {
+    width: 100%;
     display: flex;
-    width: 90vw;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-sec-btn {
-    border: 2px solid #021047;
-    color: white;
-    background-color: #021047;
-    color: white;
-    padding: 6px;
-    margin-top: 32px;
-    border-radius: 1px;
-    font-size: 17px;
-    font-family: var(--roboto);
-    cursor: pointer;
-    z-index: 1;
-}
-
-.near-to-hero-sec-btn {
-    position: relative;
-    top: 10px;
-    border: 2px solid #021047;
-    right: 135px;
-    padding: 4.6px 70px;
-    pointer-events: none;
-}
-
-.hero-sec-btn:hover {
-    transform: translate(8px, 9px);
-    transition: all .3s ease-out;
 }
 
 .hero-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#color {
-    color: #ff61ff;
-}
-
-#element {
-    color: #42eefa;
+    width: 50%;
+    margin-left: 60px;
 }
 
 .hero-left h3 {
     font-size: 2.6rem;
-    font-family: var(--roboto);
     color: #ffffff;
     margin: 3px 0px;
 }
@@ -227,10 +159,63 @@
     margin-bottom: 1.3rem;
 }
 
+.hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    pointer-events: none;
+    background-color: white;
+    clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero-right img {
+    width: 55%;
+}
+
+.hero-sec-btn {
+    border: 2px solid #021047;
+    color: white;
+    background-color: #021047;
+    color: white;
+    padding: 5px;
+    margin-top: 32px;
+    border-radius: 1px;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.near-to-hero-sec-btn {
+    position: relative;
+    top: 10px;
+    border: 2px solid #021047;
+    right: 135px;
+    padding: 9px 70px 7px 70px;
+    pointer-events: none;
+}
+
+.hero-sec-btn:hover{
+    transform: translate(8px, 9px);
+    transition: all .3s ease-out;
+}
+
+#color {
+    color: #ff61ff;
+}
+
+#element {
+    color: #42eefa;
+}
+
 .icons {
     display: flex;
     margin-top: 1rem;
+}
+
+.icons a {
     text-decoration: none;
+    color: darkslategrey;
 }
 
 .icon-child:hover {
@@ -257,28 +242,12 @@
     margin-right: 1.8rem;
 }
 
-.hero-right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    pointer-events: none;
-    background-color: white;
-    clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.hero-right img {
-    width: 38%;
-    height: 350px;
-}
-
 /* About section styles */
 .about-section {
     height: 140vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: var(--balo);
 }
 
 .head-about {
@@ -291,7 +260,10 @@
 .center {
     text-align: center;
     font-size: 2.7rem;
-    font-family: var(--balo);
+}
+
+#about-header {
+    margin-top: 100px;
 }
 
 .webdevelopment {
@@ -313,9 +285,10 @@
     padding: 20px;
     background-color: darkcyan;
     color: white;
-    font-family: var(--font-family);
     line-height: 25px;
     position: relative;
+    border-color: dodgerblue slateblue steelblue mediumslateblue;
+    border-style: solid;
 }
 
 .fa-brands,
@@ -324,18 +297,14 @@
 }
 
 /* Projects Section */
-/* First Section and Second Section */
-
-.first-section {
+.project-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 55px;
 }
 
-.first-section h1 {
-    font-family: var(--balo);
+.project-main h1 {
     font-size: 2.7rem;
     text-align: center;
     margin-top: 4rem;
@@ -345,8 +314,9 @@
 .head-first {
     display: flex;
     width: 92vw;
-    height: 100vh;
-    font-family: var(--balo);
+    height: 85vh;
+    padding-top: 15px;
+    margin-top: 10px;
 }
 
 .head-first .box-1 {
@@ -355,7 +325,6 @@
 }
 
 .head-first .box-1 p {
-    font-family: var(--roboto);
     line-height: 25px;
 }
 
@@ -368,30 +337,43 @@
 }
 
 .head-first .box-1 img:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+.project-btn {
+    justify-content: space-evenly;
+    margin-top: 10px;
+    display: flex;
 }
 
 .first-sec-btn {
-    border: 2px solid #021047;
+    border: 3px outset #021047;
     color: white;
     background-color: #021047;
     margin: 10px 17px 10px 0px;
     border-radius: 3px;
     cursor: pointer;
-    padding: 5px 5px;
-    font-size: 15px;
+    padding: 8px 8px;
+    font-size: 16px;
     z-index: 9;
 }
 
-.second-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -100px;
+.first-sec-btn:hover {
+    background: transparent;
+    background-color: darkturquoise;
+    color: #021047;
+    font-weight: bold;
+}
+
+#projects-header {
+    margin-top: 100px;
 }
 
 /* Footer section styles */
+#contact-header {
+    margin-top: 100px;
+}
+
 .footer-section {
     width: 90%;
     margin: auto;
@@ -408,14 +390,12 @@
 }
 
 .footer-father .footer-left h1 {
-    font-family: var(--balo);
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .footer-father .footer-left p {
     line-height: 23px;
-    font-family: var(--roboto);
     font-size: 18px;
 }
 
@@ -429,6 +409,7 @@
     font-size: 29px;
     margin-top: 14px;
     cursor: pointer;
+    color: darkblue;
 }
 
 .footer-father .footer-right {
@@ -437,16 +418,18 @@
     width: 42%;
 }
 
+.footer-father .footer-right label {
+    font-size: 18px;
+}
+
 .footer-father .footer-right input,
 textarea {
     padding: 14px 5px;
-    font-size: 17px;
-    background: #cabfbf;
+    background: bisque;
     border: none;
     color: black;
     border-radius: 5px;
     margin: 8px 0px;
-    font-family: var(--roboto);
 }
 
 .footer-father .footer-right input,
@@ -460,6 +443,7 @@ textarea,
     background: darkblue;
     color: white;
     letter-spacing: 2px;
+    font-family: sans-serif;
 }
 
 .footer-btn:hover {
@@ -477,114 +461,9 @@ textarea,
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--balo);
+    font-family: sans-serif;
 }
 
 .foot {
     color: white;
-}
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    /* Adjust navigation */
-    .navigation {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .navigation .left {
-        margin-bottom: 20px;
-    }
-
-    #pic {
-        margin-top: 20px;
-        width: 50%;
-    }
-
-    .navigation .right {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .navigation .right ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navigation .right ul li {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    /* Adjust hero section */
-    .hero-section {
-        height: auto;
-        padding: 50px 0;
-    }
-
-    .hero-left {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-left h3,
-    .hero-left h1 {
-        font-size: 2rem;
-    }
-
-    .hero-left .icons {
-        justify-content: center;
-    }
-
-    .hero-right {
-        display: none;
-    }
-
-    /* Adjust about section */
-    .about-section {
-        height: auto;
-        padding: 50px 0;
-    }
-
-    .webdevelopment p {
-        margin: 20px 0;
-    }
-
-    /* Adjust projects section */
-    .first-section,
-    .second-section {
-        flex-direction: column;
-        margin-left: 0;
-    }
-
-    .first-section .box-1,
-    .second-section .box-1 {
-        width: 90%;
-        margin: 0 auto 30px;
-    }
-
-    .head-first {
-        flex-direction: column;
-        align-items: center; /* Added to center items vertically */
-    }
-
-    /* Adjust footer section */
-    .footer-father {
-        flex-direction: column;
-    }
-
-    .footer-father .footer-left,
-    .footer-father .footer-right {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .footer-father .footer-right input,
-    .footer-father .footer-right textarea {
-        width: 100%;
-    }
-
-    .footer-btn {
-        width: 100%;
-    }
 }
