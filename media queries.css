@@ -1,5 +1,5 @@
 /* Media queries for responsiveness */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
     /* Adjust navigation */
     header nav {
         display: none;
@@ -32,13 +32,13 @@
 
     #hamburger {
         display: block;
-        top: 3.4rem;
-        right: 3rem;
+        top: 9rem;
+        right: 5rem;
         background-color: transparent;
     }
 
     .navigation .left {
-        margin-left: -300px;
+        margin-left: -380px;
     }
 
     /* Adjust hero section */
@@ -151,7 +151,6 @@
 
     .hero-left {
         width: 100%;
-        text-align: center;
     }
 
     .hero-left h3,
@@ -223,7 +222,21 @@
         position: absolute;
         background-color: transparent;
         cursor: pointer;
-        right: 2rem;
+        right: 4rem;
+        display: block;
+        top: 4.5rem;
     }
 }
 
+@media only screen and (max-width: 445px) {
+    .navigation .left {
+        margin-left: -280px;
+    }
+
+    #hamburger {
+        background-color: transparent;
+        right: 3rem;
+        display: block;
+        top: 2.8rem;
+    }
+}
