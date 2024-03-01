@@ -228,13 +228,13 @@
 @media only screen and (max-width: 600px) {
     .navigation .left {
         margin-top: -10px;
-        margin-left: -265px;
+        margin-left: -280px;
     }
 
     #hamburger {
         background-color: transparent;
         right: 3rem;
         display: block;
-        top: 2.5rem;
+        top: 2.6rem;
     }
 }
