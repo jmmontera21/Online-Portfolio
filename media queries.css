@@ -238,3 +238,17 @@
         top: 2.65rem;
     }
 }
+
+@media only screen and (max-width: 380px) {
+    .navigation .left {
+        margin-top: -10px;
+        margin-left: -270px;
+    }
+
+    #hamburger {
+        background-color: transparent;
+        right: 2.6rem;
+        display: block;
+        top: 2.10rem;
+    }
+}
